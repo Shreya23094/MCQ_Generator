@@ -1,6 +1,6 @@
 MCQ,Choices,Correct
 Who coined the term 'machine learning'?,a:Alan Turing | b:Arthur Samuel | c:Donald Hebb | d:Warren McCulloch,b
-What is the main goal of machine learning?,a:To create human-like consciousness | b:To learn from data and make predictions or decisions | c:To replace all human jobs | d:To understand the human brain,b
-Which of the following is a key component of machine learning?,a:Common sense | b:Statistical algorithms | c:Perfect accuracy | d:Human emotions,b
-What is the primary objective of supervised learning?,a:To find patterns in unlabeled data | b:To make predictions using labeled data | c:To mimic human creativity | d:To perform tasks without any instructions,b
-Which of the following is a field related to machine learning?,a:Astrology | b:Data mining | c:Alchemy | d:Homeopathy,b
+What is the primary goal of machine learning?,a:To mimic human thought processes | b:To classify data based on models | c:To make predictions for future outcomes | d:All of the above,d
+Which of the following is NOT a part of machine learning?,a:Data mining | b:Predictive analytics | c:Common sense reasoning | d:Statistics,c
+What is the foundation of machine learning?,a:Natural language processing | b:Statistics and mathematical optimization | c:Computer vision | d:Speech recognition,b
+Which of the following is a subdiscipline in machine learning?,a:Exploratory data analysis (EDA) | b:Deep learning | c:Teaching strategies | d:Neural networks,d

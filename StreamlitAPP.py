@@ -10,7 +10,7 @@ from src.mcqgenerator.MCQGenerator import generate_chain
 from src.mcqgenerator.logger import logging
 
 
-with open("C:\\Users\\SHREYA SINGH\\OneDrive\\Desktop\\MCQ_Generator\\Response.json") as file:
+with open("Response.json") as file:
     RESPONSE_JSON=json.load(file)
 
 #create title
@@ -20,7 +20,7 @@ st.title("MCQs Creator with HuggingFace and Langchain")
 with st.form("user_inputs:"):
     uploaded_file=st.file_uploader("Upload a PDF or Text File")
     mcq_count=st.number_input("Number of MCQs",min_value=3,max_value=50)
-    subject=st.text_input("Insert Subject",max_chars=50)
+    subject=st.text_input("Insert Subject",max_chars=30)
     tone=st.text_input("Complexity level of Questions",max_chars=20,placeholder="Simple")
     button=st.form_submit_button("Create MCQs")
 
@@ -37,27 +37,18 @@ with st.form("user_inputs:"):
                         "response_json":json.dumps(RESPONSE_JSON)
                     }
                 )
-                match = re.search(r"### RESPONSE_JSON\s*(\{.*\})", response['quiz'], re.DOTALL)
-                response_text=str(match.group(1))
-                match = re.search(r"###\s*\w+:\s*\n(.*)", response_text, re.DOTALL)
-                quiz=json.loads(str(match.group(1)))
                 #st.write(quiz)
             except Exception as e:
                 traceback.print_exception(type(e),e,e.__traceback__)
                 st.error("Error")
             else:
-                if isinstance(quiz,dict):
+                quiz = re.findall(r">([^<]+)<", response['quiz'],re.DOTALL)
+                quiz="\n\n".join(quiz)
+                            
+                if isinstance(quiz,str):
                     if quiz is not None:
-                        table_data=get_table_data(quiz)
-                        if table_data is not None:
-                            df=pd.DataFrame(table_data)
-                            df.index=df.index+1
-                            st.table(df)
-                            t="Check from an expert English Writer of the above quiz:"
-                            match=re.search(re.escape(t) + r"\s*(.*)",response['review'],re.DOTALL)
-                            review=match.group(1)
-                            st.text_area(label="Review",value=review)
-                        else:
-                            st.error("Error in the table data")
+                        st.write(quiz)
+                    else:
+                        st.error("Error in the data")
                 else:
                     st.write(quiz)

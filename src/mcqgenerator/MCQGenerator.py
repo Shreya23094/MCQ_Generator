@@ -20,7 +20,7 @@ load_dotenv()
 api_key=os.getenv("HUGGINGFACEHUB_API_TOKEN")
 os.environ["HUGGINGFACEHUB_API_TOKEN"]=api_key
 
-llm=HuggingFaceHub(repo_id="facebook/opt-1.3b",model_kwargs={"temperature": 0.7, "max_length": 512})
+llm=HuggingFaceHub(repo_id="tiiuae/falcon-7b-instruct",model_kwargs={"temperature": 0.7, "max_length": 512})
 
 TEMPLATE1="""
 Text:{text}
