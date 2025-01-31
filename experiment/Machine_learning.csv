@@ -1,6 +1,6 @@
 MCQ,Choices,Correct
-What is machine learning?,a:A type of data analysis that draws conclusions from data without being explicitly programmed. | b:A type of programming that involves writing code to solve complex problems. | c:A type of software development that focuses on creating user-friendly interfaces. | d:A type of data visualization that helps in understanding complex data.,a
-Which of the following is NOT a part of machine learning?,a:Supervised Learning | b:Unsupervised Learning | c:Reinforcement Learning | d:Programmed Learning,d
-What does ML find application in?,"a:Only in programming and data analysis. | b:In many fields like natural language processing, computer vision, speech recognition, email filtering, agriculture, and medicine. | c:Only in business problems as predictive analytics. | d:Only in statistics and mathematical optimization.",b
-Who coined the term 'machine learning'?,a:Donald Hebb | b:Arthur Samuel | c:Warren McCulloch | d:Raytheon Company,b
-What is a key mathematical foundation of machine learning?,a:Algebra | b:Geometry | c:Statistics and mathematical optimization | d:Calculus,c
+Who coined the term 'machine learning'?,a:Alan Turing | b:Donald Hebb | c:Arthur Samuel | d:Raytheon Company,c
+What is the primary goal of machine learning?,a:To predict the future | b:To understand human thought processes | c:To classify data | d:To replace human jobs,a
+What is the foundation of machine learning?,a:Philosophy | b:Statistics and mathematical optimization | c:Artificial Intelligence | d:Computer Science,b
+Which of the following is NOT a field related to machine learning?,a:Data mining | b:Predictive analytics | c:Human psychology | d:Deep learning,c
+What is the process of training a machine learning model called?,a:Learning | b:Tuning | c:Training | d:Testing,c
